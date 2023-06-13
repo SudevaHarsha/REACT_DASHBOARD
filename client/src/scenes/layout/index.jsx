@@ -13,9 +13,7 @@ const Layout = () => {
   const isNonMobile = useMediaQuery("(min-width: 600px)");
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const userId = useSelector((state) => state.global.userId);
-  console.log(userId);
   const { data } =  useGetUserQuery(userId);
-  console.log( data);
 
   /* const getUser= async() => {
     const {adata} = await axios.get(`http://localhost:3500/general/user/${userId}`);
