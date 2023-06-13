@@ -100,12 +100,12 @@ const Products = () => {
           }}
           >
            {data.map((p)=>(
-            <Product
+            <Product key={p._id}
              p={p}
             ></Product>
            ))}
         </Box>
-         : <></>}
+         : <>Loading...</>}
     </Box>
   )
 }
